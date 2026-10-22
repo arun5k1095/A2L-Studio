@@ -1,0 +1,643 @@
+.learning-guide .learn-sidebar nav > button > span {
+  color: #486450;
+}
+.learning-guide {
+  padding: 0;
+  border: 1px solid #cddbd2;
+  border-radius: 8px;
+  color: #263e2f;
+  background: #fff;
+  width: min(1120px, calc(100vw - 48px));
+  height: min(820px, calc(100dvh - 48px));
+  max-width: none;
+  max-height: none;
+  box-shadow: 0 20px 90px #102b3155;
+  overflow: hidden;
+}
+.learning-guide[open] {
+  display: grid;
+  grid-template-rows: 74px minmax(0, 1fr) 58px;
+}
+.learning-guide::backdrop {
+  background: #16372d77;
+  backdrop-filter: blur(3px);
+}
+.learn-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-bottom: 1px solid #dfe8e2;
+}
+.learn-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #176b51;
+}
+.learn-brand h1 {
+  font-size: 19px;
+  font-weight: 600;
+}
+.learn-brand span {
+  font-size: 11px;
+  display: block;
+  color: #617767;
+  margin-top: 5px;
+}
+.learn-layout {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  min-height: 0;
+}
+.learn-sidebar {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e0e9e3;
+  padding: 18px 12px;
+  background: #fafcfb;
+}
+.learn-search {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #d8e3dc;
+  border-radius: 4px;
+  padding: 0 8px;
+  background: white;
+  color: #617767;
+  min-height: 34px;
+  margin: 0 4px 16px;
+}
+.learn-search input {
+  font: inherit;
+  font-size: 11px;
+  background: transparent;
+  border: 0;
+  padding: 8px 0;
+  min-width: 0;
+  width: 100%;
+  color: #364e40;
+  outline-offset: 4px;
+}
+.learn-search input::placeholder {
+  color: #617767;
+}
+.learn-sidebar nav {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+.learn-sidebar nav > button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 10px;
+  width: 100%;
+  text-align: left;
+  font-size: 11px;
+  background: transparent;
+  border-radius: 4px;
+  color: #526d5b;
+  min-height: 39px;
+}
+.learn-sidebar nav > button:hover {
+  background: #edf4ef;
+}
+.learn-sidebar nav > button.active {
+  color: #176b51;
+  background: #e7f1eb;
+}
+.learn-sidebar nav > button > span {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 9px;
+  color: #637e6c;
+}
+.learn-sidebar nav > button strong {
+  font-weight: 500;
+  flex: 1;
+}
+.learn-progress {
+  padding: 16px 7px 0;
+  font-size: 10px;
+  color: #617767;
+}
+.learn-progress progress {
+  display: block;
+  width: 100%;
+  height: 4px;
+  accent-color: #176b51;
+  margin-top: 10px;
+}
+.learn-main {
+  overflow: auto;
+  min-width: 0;
+  min-height: 0;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+.learn-main article {
+  padding: 30px 36px 45px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.learn-chapter-number {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  color: #617767;
+  margin-bottom: 12px;
+}
+.learn-main h2 {
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+.learn-main .learn-summary {
+  font-size: 14px;
+  color: #5c7665;
+  margin: 12px 0 27px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #e0e9e3;
+}
+.learn-main p,
+.learn-main li,
+.learn-main dd {
+  font-size: 13px;
+  line-height: 1.85;
+  color: #405d4b;
+}
+.learn-main p {
+  margin: 12px 0;
+}
+.learn-main h3 {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 29px 0 10px;
+  font-weight: 600;
+}
+.learn-main ul,
+.learn-main ol:not(.learn-flow) {
+  padding-left: 20px;
+  margin: 13px 0;
+}
+.learn-main li {
+  margin: 7px 0;
+}
+.learn-main code {
+  font-size: 11px;
+  color: #315b45;
+  overflow-wrap: anywhere;
+}
+.learn-code {
+  margin: 18px 0;
+  background: #f4f7f5;
+  border: 1px solid #dce6df;
+  border-left: 3px solid #6b9a7c;
+  border-radius: 4px;
+  padding: 16px;
+  overflow-x: auto;
+  white-space: pre;
+  line-height: 1.9;
+  font-size: 11px;
+}
+.learn-code code {
+  font-family: "IBM Plex Mono", monospace;
+  color: #365b44;
+}
+.learn-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 15px 0 15px 14px;
+  border-left: 3px solid #789cb3;
+  background: #f2f7fa;
+  margin: 23px 0;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #405c6c;
+}
+.learn-note > svg {
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+.learn-note > div {
+  padding-right: 14px;
+}
+.learn-flow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid #dfe8e2;
+  border-bottom: 1px solid #dfe8e2;
+  margin: 23px 0;
+}
+.learn-flow li {
+  position: relative;
+  padding: 17px 19px 17px 10px !important;
+  margin: 0 !important;
+  min-width: 0;
+}
+.learn-step-number {
+  display: grid;
+  place-items: center;
+  height: 22px;
+  width: 22px;
+  border: 1px solid #bdd4c6;
+  border-radius: 50%;
+  font-size: 10px;
+  color: #176b51;
+  margin-bottom: 9px;
+}
+.learn-flow strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.learn-flow li > span:not(.learn-step-number) {
+  display: block;
+  font-size: 11px;
+  line-height: 1.7;
+  color: #617767;
+  margin-top: 7px;
+  overflow-wrap: anywhere;
+}
+.learn-flow-arrow {
+  position: absolute;
+  right: 0;
+  top: 22px;
+  color: #7d9e89;
+}
+.learn-table-scroll {
+  overflow: auto;
+  margin: 16px 0;
+}
+.learn-table-scroll table {
+  white-space: normal;
+}
+.learn-table-scroll th,
+.learn-table-scroll td {
+  padding: 10px 12px !important;
+  height: auto;
+  font-size: 12px;
+  line-height: 1.7;
+  vertical-align: top;
+}
+.learn-table-scroll th {
+  background: #f4f7f5;
+  color: #526d5b;
+  font-weight: 600;
+}
+.learn-table-scroll td:first-child {
+  font-weight: 500;
+  min-width: 110px;
+}
+.learn-walkthrough {
+  margin: 15px 0;
+}
+.learn-code.annotated {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 2.5;
+}
+.learn-token {
+  font-family: "IBM Plex Mono", monospace;
+  background: #e6eee9;
+  border-bottom: 1px dashed #749a80;
+  color: #345d43;
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-size: 11px;
+  line-height: 1.7;
+  margin: 2px 0;
+}
+.learn-token.active {
+  background: #d4e8dc;
+  border-bottom-style: solid;
+  color: #17472c;
+}
+.learn-annotation {
+  padding: 10px 0 0 14px;
+  border-left: 2px solid #548b6b;
+}
+.learn-annotation strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+.learn-annotation p {
+  margin: 6px 0;
+  font-size: 12px;
+}
+.learn-lab {
+  border-top: 1px solid #dfe8e2;
+  border-bottom: 1px solid #dfe8e2;
+  padding: 22px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+.learn-lab-controls label {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  color: #405d4b;
+}
+.learn-lab-controls label output {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+}
+.learn-lab input[type="range"] {
+  display: block;
+  width: 100%;
+  margin: 12px 0 20px;
+  accent-color: #176b51;
+}
+.learn-equation {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  color: #526d5b;
+  line-height: 1.7;
+}
+.learn-physical {
+  display: block;
+  font-size: 26px;
+  color: #176b51;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.learn-physical span {
+  font-size: 13px;
+  font-weight: 400;
+}
+.learn-lab figure {
+  margin: 0;
+  align-self: center;
+  min-width: 0;
+}
+.learn-lab svg {
+  width: 100%;
+  height: auto;
+}
+.learn-lab svg text {
+  font-size: 10px;
+  fill: #526d5b;
+  font-family: "DM Sans", sans-serif;
+}
+.learn-lab figcaption {
+  font-size: 10px;
+  color: #617767;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+.learn-map {
+  display: grid;
+  grid-template-columns: 1.15fr repeat(3, 1fr);
+  gap: 1px;
+  background: #e0e9e3;
+  border: 1px solid #d9e4dc;
+  margin: 20px 0;
+  overflow: auto;
+}
+.learn-map > * {
+  padding: 13px 8px;
+  font-size: 11px;
+  text-align: center;
+  background: #f8fbf9;
+  white-space: nowrap;
+  font-weight: 500;
+}
+.learn-map > span {
+  background: #d8eadd;
+  color: #254e36;
+  font-family: "IBM Plex Mono", monospace;
+}
+.learn-map > span:nth-child(4n + 3) {
+  background: #c4ddce;
+}
+.learn-byte-order {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #dfe8e2;
+  border-bottom: 1px solid #dfe8e2;
+  margin: 20px 0;
+}
+.learn-byte-order > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 12px 0;
+}
+.learn-byte-order strong {
+  font-size: 12px;
+  font-weight: 500;
+}
+.learn-byte-order code {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.learn-byte-order code > span {
+  display: inline-block;
+  padding: 7px 10px;
+  background: #e5f0e9;
+  border: 1px solid #c9ddcf;
+  margin-left: 5px;
+}
+.learn-glossary {
+  margin: 0;
+}
+.learn-glossary > div {
+  padding: 16px 0;
+  border-bottom: 1px solid #e0e9e3;
+}
+.learn-glossary dt {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c503b;
+}
+.learn-glossary dd {
+  margin: 7px 0 0;
+}
+.learn-workflow > li {
+  padding-left: 5px;
+  margin-bottom: 20px !important;
+}
+.learn-workflow strong {
+  font-weight: 600;
+}
+.learn-workflow p {
+  margin: 5px 0 !important;
+}
+.learn-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 22px;
+  border-top: 1px solid #dfe8e2;
+  background: #fafcfb;
+}
+.learn-footer > div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.learn-footer > div > span {
+  font-size: 10px;
+  color: #617767;
+  white-space: nowrap;
+}
+.learn-about {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  font-size: 11px;
+  color: #526d5b;
+  padding: 5px;
+}
+.learn-mobile-nav {
+  display: none;
+}
+.learn-no-results {
+  padding: 14px 10px;
+  color: #617767;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.learn-no-results button {
+  display: block;
+  color: #176b51;
+  background: transparent;
+  padding: 8px 0;
+  text-decoration: underline;
+}
+@media (max-width: 760px) {
+  .learning-guide {
+    width: calc(100vw - 16px);
+    height: calc(100dvh - 16px);
+  }
+  .learning-guide[open] {
+    grid-template-rows: 64px minmax(0, 1fr) 56px;
+  }
+  .learn-header {
+    padding: 0 16px;
+  }
+  .learn-brand h1 {
+    font-size: 17px;
+  }
+  .learn-brand span {
+    font-size: 10px;
+  }
+  .learn-layout {
+    display: block;
+    overflow: hidden;
+  }
+  .learn-sidebar {
+    display: none;
+  }
+  .learn-main {
+    height: 100%;
+  }
+  .learn-main article {
+    padding: 23px 20px 35px;
+  }
+  .learn-main h2 {
+    font-size: 24px;
+  }
+  .learn-mobile-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    border-bottom: 1px solid #e0e9e3;
+    background: #fafcfb;
+  }
+  .learn-mobile-nav .learn-mobile-search {
+    flex: 0 0 100%;
+    margin: 0;
+  }
+  .learn-mobile-nav label {
+    font-size: 11px;
+    color: #526d5b;
+  }
+  .learn-mobile-nav select {
+    min-width: 0;
+    flex: 1;
+    font-size: 12px;
+    color: #34543f;
+    padding: 7px;
+    border: 1px solid #d3e0d8;
+    border-radius: 4px;
+    background: #fff;
+  }
+  .learn-flow {
+    grid-template-columns: 1fr;
+  }
+  .learn-flow li {
+    padding: 13px 10px !important;
+    border-bottom: 1px solid #e5ece7;
+  }
+  .learn-flow li:last-child {
+    border: 0;
+  }
+  .learn-step-number {
+    float: left;
+    margin: 0 12px 25px 0;
+  }
+  .learn-flow-arrow {
+    display: none;
+  }
+  .learn-flow li > span:not(.learn-step-number) {
+    margin-top: 4px;
+  }
+  .learn-lab {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .learn-lab figure {
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+  }
+  .learn-byte-order > div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .learn-footer {
+    padding: 0 12px;
+  }
+  .learn-footer > div {
+    gap: 8px;
+  }
+  .learn-footer .small {
+    padding: 6px 9px;
+    font-size: 10px;
+  }
+  .learn-about {
+    font-size: 10px;
+  }
+  .learn-map > * {
+    padding: 10px 4px;
+    font-size: 9px;
+  }
+  .learn-code {
+    padding: 12px;
+    font-size: 10px;
+  }
+  .learn-code code,
+  .learn-token {
+    font-size: 10px;
+  }
+  .learn-header .icon-button {
+    min-width: 32px;
+    height: 32px;
+  }
+}
